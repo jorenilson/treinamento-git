@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-.
-..
-=======
->>>>>>> parent of 7fc3424 (Adicionado um ponto no arquivo teste.txt)
