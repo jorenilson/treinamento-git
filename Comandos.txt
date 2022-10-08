@@ -1,0 +1,38 @@
+Primeiro passo ao se configurar um novo repositório no git?
+R: Configurar o nome e email do usuário.
+
+#git branch - Para listar todas as branchs que temos no momento.
+Como criar Nova Branches:
+#git branch <nome_da_nova_branch> - Para criar uma nova branch apenas.
+#git checkout -b <nome_da_nova_branch> - Este comando já cria uma nova branch caso não exista.
+Manipulando Branches criadas:
+#git checkout <nome_da_nova_branch> - Para mudar para a outra branch.
+#git switch -c <nome_da_nova_branch> - Complemento dos dois comandos a cima. Para criar uma nova branch e mudar para ela ao mesmo tempo.
+Mudanças(Adicionar/push/commit):
+#git add . - Irá adicionar um novo arquivo ou alteração para prepará-lo para ser comitado.
+Nesta parte do processo, a nova branch já deverá está aparecendo no github web.
+#git commit -m "<descrever_aqui>" - Comando para enviar um novo commit usando a branch selecionada. Requer rodar o comando a cima pelo menos uma vez para criar um novo branch.
+Como fazer um merge de uma branch para outra:
+#git branch - Para verificar em qual branch estou.
+#git checkout <nome_branch_destino> - Entrar na branch que vai estar recebendo as atualizações.
+#git merge <nome_branch_destino> <nome_brach_origem> - Para mergear os arquivos da branch staging para master, por exemplo.
+#git remote add <Endereco_http_do_repositorio> - Este comando irá registra o repositório no github, local.
+#git push --set-upstream origin <nome_da_nova_branch> - Sempre que criamos uma nova branch e precisamos subir ela pra nuvem, precisamos rodar este comando apenas uma vez.
+#git push - Para fazer o commit das mudanças para o repositório remoto(non-bare repository). Só é possível em non-bare repository e ou remote.
+
+#git remote -v - Comando para verificar se existe algun repositório registrado.
+
+#git clone <Caminho_do_repositório> . - Este comando irá clonar um repositório já existente para um novo.
+#git push - Este comando em repositório local (non-bare), gera um erro ao ser chamado. Repositório que não são do tipo bare, são apenas de leitura.
+#git fetch - Este comando baixa os arquivos sem realizar o merge.
+#git rebase - Este comando depende do comando fetch. Somente após ele os novos arquivos aparecem.
+#git pull - Este comando faz o fetch e o rebase ao mesmo tempo.
+
+Trabalhando com repositório Bare:
+#git init --bare - Este comando irá criar um novo repositório limpo do tipo Bare.
+
+
+#git config credential.helper store - este comando irá armazenar difinitivamente as credenciais do usuário.
+#git checkout -- . - Este comando irá permitir desfazer o estado atual do arquivo quando estiver em modificado.
+#git checkout HEAD -- . - Este comando tem a finalidade de desfazer o estado atual do arquivo quando tiver pronto para ser comitado.
+#git restore --staged . - Este comando possibilita restaurar conteúdo que estiver commitado, para Modified or New.
