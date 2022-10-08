@@ -36,6 +36,3 @@ Trabalhando com repositório Bare:
 #git checkout -- . - Este comando irá permitir desfazer o estado atual do arquivo quando estiver em modificado.
 #git checkout HEAD -- . - Este comando tem a finalidade de desfazer o estado atual do arquivo quando tiver pronto para ser comitado.
 #git restore --staged . - Este comando possibilita restaurar conteúdo que estiver commitado, para Modified or New.
-
-
-Desfazendo Revert e Reset:
